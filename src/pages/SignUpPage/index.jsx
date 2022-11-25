@@ -15,6 +15,10 @@ const initialState = {
 class SignUpPage extends Component {
   state = { ...initialState };
 
+  //for the password confirmation outlines
+  passwordConfirmStyle = { outline: "none" };
+  passwordValue;
+
   submitHandler = (e) => {
     const {
       firstName,
@@ -26,11 +30,14 @@ class SignUpPage extends Component {
       userStatus,
       allowOffers,
     } = this.state;
+
     e.preventDefault();
+
     if (password !== passwordConfirm) {
       alert("Passwords don't match!");
       return;
     }
+
     alert(
       `Created account: 
       First name: ${firstName}
@@ -47,7 +54,9 @@ class SignUpPage extends Component {
       }
       Offers: ${allowOffers ? "Allowed" : "Not allowed"}`
     );
+
     this.setState({ ...initialState });
+    this.passwordConfirmStyle = { outline: "none" };
   };
 
   handleChange = (e) => {
@@ -56,6 +65,16 @@ class SignUpPage extends Component {
     } = e;
 
     const newValue = type === "checkbox" ? checked : value;
+
+    if (name === "password") {
+      this.passwordValue = value;
+    }
+
+    if (name === "passwordConfirm") {
+      value === this.passwordValue
+        ? (this.passwordConfirmStyle = { outline: "2px solid green" })
+        : (this.passwordConfirmStyle = { outline: "2px solid red" });
+    }
 
     const newState = {
       [name]: newValue,
@@ -74,6 +93,7 @@ class SignUpPage extends Component {
       userStatus,
       allowOffers,
     } = this.state;
+
     return (
       <>
         <h1 className={styles.title}>CREATE AN ACCOUNT</h1>
@@ -120,6 +140,7 @@ class SignUpPage extends Component {
             />
             <input
               className={styles.input}
+              style={this.passwordConfirmStyle}
               type="password"
               name="password"
               placeholder="Password"
@@ -129,6 +150,7 @@ class SignUpPage extends Component {
             />
             <input
               className={styles.input}
+              style={this.passwordConfirmStyle}
               type="password"
               name="passwordConfirm"
               placeholder="Password confirmation"
