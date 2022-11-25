@@ -45,13 +45,7 @@ class SignUpPage extends Component {
       Display name: ${displayName}
       Email: ${email}
       Password: ${password}
-      Status: ${
-        userStatus === "buyer"
-          ? "Buyer"
-          : userStatus === "seller"
-          ? "Seller"
-          : "No specific status"
-      }
+      Status: ${userStatus === "buyer" ? "Buyer" : "Seller"}
       Offers: ${allowOffers ? "Allowed" : "Not allowed"}`
     );
 
