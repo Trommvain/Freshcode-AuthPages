@@ -22,17 +22,19 @@
     flex-wrap: wrap;
     width: 600px;
     justify-content: space-around;
-    padding: 20px 20px;
+    padding: 20px 20px 0 20px;
+}
+
+.fieldSection {
+  height: 100px;
 }
 
 .input {
-    width: 37%;
     padding: 25px 25px;
     border: none;
     outline: none;
     border-radius: 5px;
     font-size: 18px;
-    margin: 10px 0;
 
         &::placeholder {
             color: rgb(192, 192, 192);
@@ -56,7 +58,7 @@
     color: white;
     width: 100%;
     border: 1px solid white;
-    margin: 10px auto 25px auto;
+    margin: 0 auto 25px auto;
     padding: 5px 10px;
 
     p {
@@ -94,4 +96,11 @@
     font-weight: 800;
     color: white;
     cursor: pointer;
+  }
+
+  .errorMsg {
+    color: rgb(255, 0, 157);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 0 0 8px;
   }

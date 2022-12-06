@@ -13,6 +13,10 @@
     padding: 20px 50px;
     color: white;
   }
+
+  .fieldSection {
+    height: 100px;
+  }
   
   .input {
     width: 90%;
@@ -21,7 +25,6 @@
     outline: none;
     border-radius: 5px;
     font-size: 18px;
-    margin: 15px 0;
 
         &::placeholder {
             color: rgb(192, 192, 192);
@@ -32,18 +35,12 @@
         }
   }
 
-  .passwordBlock {
-    margin-bottom: -25px;
-    padding: 0;
-    width: 100%;
-
-    img {
-      position: relative;
-      bottom: 63px;
-      left: 438px;
-      width: 35px;
-      height: 30px;
-    }
+  .showPasswordIcon {
+    position: relative;
+    bottom: 51px;
+    left: 438px;
+    width: 35px;
+    height: 30px;
   }
 
   .loginBtn {
@@ -57,4 +54,18 @@
     font-weight: 800;
     color: white;
     cursor: pointer;
+  }
+
+  .errorMsg {
+    color: rgb(255, 0, 157);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 0 0 8px;
+  }
+
+  .errorMsgSpecial {
+    color: rgb(255, 0, 157);
+    font-weight: 700;
+    font-size: 15px;
+    margin: -33px 0 13px 8px;
   }
