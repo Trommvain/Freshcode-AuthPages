@@ -1,6 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.scss";
-import Header from "./components/Header";
 import LogInPage from "./pages/LogInPage";
 import SignUpPage from "./pages/SignUpPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -8,8 +7,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 function App() {
   return (
     <div className="app">
-      <Header />
-
       <Switch>
         <Route exact path="/">
           <Redirect to="/login" />

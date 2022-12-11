@@ -1,0 +1,50 @@
+.fieldSection {
+    height: 100px;
+  }
+  
+.input {
+    padding: 25px 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+
+        &::placeholder {
+            color: rgb(192, 192, 192);
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+}
+
+.radioBtn {
+    margin-right: 10px;
+}
+
+.radioBtnLbl {
+    display: block;
+    width: 550px !important;
+    padding: 20px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+    margin: 0 auto 25px auto;
+    padding: 5px 10px;
+
+    p {
+        font-size: 14px;
+        margin-left: 30px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.errorMsg {
+    color: rgb(255, 0, 157);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 0 0 8px;
+}
