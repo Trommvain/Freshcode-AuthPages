@@ -1,21 +1,35 @@
+@import '../../common/scssTemplates';
+@import '../../common/scssVariables';
+
 .fieldSection {
     height: 100px;
   }
   
 .input {
-    padding: 25px 25px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 18px;
+    @extend %input;
+    margin: 0 5px;
 
-        &::placeholder {
-            color: rgb(192, 192, 192);
-        }
+    @media screen and (min-width: 320px) and (max-width: 630px) {
+        width: 75vw;
+        margin: 0;
+    }
+}
 
-        &:focus::placeholder {
-            color: transparent;
-        }
+.radioBtnContainer {
+    display: flex;
+    width: 550px !important;
+    padding: 20px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $lightThemeColor;
+    width: 100%;
+    border: 1px solid $lightThemeColor;
+    margin: 0 auto 20px auto;
+    padding: 15px 10px;
+
+    @media screen and (min-width: 320px) and (max-width: 630px) {
+        width: 80vw !important;
+    }
 }
 
 .radioBtn {
@@ -23,28 +37,14 @@
 }
 
 .radioBtnLbl {
-    display: block;
-    width: 550px !important;
-    padding: 20px 20px;
-    font-size: 22px;
-    font-weight: 500;
-    color: white;
-    width: 100%;
-    border: 1px solid white;
-    margin: 0 auto 25px auto;
-    padding: 5px 10px;
+    margin: 0;
+}
 
-    p {
-        font-size: 14px;
-        margin-left: 30px;
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
+.description {
+    font-size: 14px;
+    margin: 0;
 }
 
 .errorMsg {
-    color: rgb(255, 0, 157);
-    font-weight: 700;
-    font-size: 15px;
-    margin: 0 0 0 8px;
+   @extend %errorMsg;
 }

@@ -1,0 +1,38 @@
+@import '../common/scssVariables';
+
+%errorMsg {
+    color: $errorTxtColor;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 0 0 8px;
+}
+
+%input {
+    padding: 25px 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+
+        &::placeholder {
+            color: $placeholderTxtColor;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+}
+
+%formSubmitBtn {
+    border: none;
+    border-radius: 5px;
+    background-color: $submitBtnBgColor;
+    padding: 20px 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: $lightThemeColor;
+    cursor: pointer;
+    user-select: none;
+}

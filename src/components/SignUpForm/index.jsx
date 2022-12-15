@@ -46,7 +46,7 @@ function SignUpForm() {
       onSubmit={submitHandler}
       validationSchema={SIGN_UP_SCHEMA}
     >
-      <Form>
+      <Form className={styles.form}>
         <section className={styles.inputBlock}>
           <InputWithError name="firstName" placeholder="First name" />
           <InputWithError name="lastName" placeholder="Last name" />
@@ -80,14 +80,17 @@ function SignUpForm() {
           Marketplace."
         />
 
-        <label className={styles.allowOffers}>
+        <div className={styles.allowOffersContainer}>
           <Field
             className={styles.allowCheckbox}
             type="checkbox"
             name="allowOffers"
           />
-          Allow Squadhelp to send marketing/promotional offers from time to time
-        </label>
+          <label className={styles.allowOffers}>
+            Allow Squadhelp to send marketing/promotional offers from time to
+            time
+          </label>
+        </div>
         <button className={styles.createAccBtn} type="submit">
           CREATE ACCOUNT
         </button>

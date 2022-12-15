@@ -24,15 +24,17 @@ export const InputWithError = (props) => {
 export const RadioButton = (props) => {
   const { name, value, text, description } = props;
   return (
-    <label className={styles.radioBtnLbl}>
+    <div className={styles.radioBtnContainer}>
       <Field
         className={styles.radioBtn}
         type="radio"
         name={name}
         value={value}
       />
-      {text}
-      <p>{description}</p>
-    </label>
+      <label className={styles.radioBtnLbl}>
+        {text}
+        <p className={styles.description}>{description}</p>
+      </label>
+    </div>
   );
 };

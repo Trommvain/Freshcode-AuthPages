@@ -9,10 +9,13 @@ function Header() {
   return (
     <header className={styles.header}>
       <a href="https://www.squadhelp.com/">
-        <img src={logo} alt="site logo" />
+        <img className={styles.logoPic} src={logo} alt="site logo" />
       </a>
       <button className={styles.authBtn}>
-        <Link to={pathname === "/login" ? "/signup" : "/login"}>
+        <Link
+          className={styles.link}
+          to={pathname === "/login" ? "/signup" : "/login"}
+        >
           {pathname === "/login" ? "SIGNUP" : "LOGIN"}
         </Link>
       </button>

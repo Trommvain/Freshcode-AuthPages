@@ -1,31 +1,27 @@
+@import '../../common/scssTemplates';
+@import '../../common/scssVariables';
+
 .form {
     width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 20px 50px;
-    color: white;
-}
+    color: $lightThemeColor;
 
-.fieldSection {
-    height: 100px;
+    @media screen and (min-width: 320px) and (max-width: 620px) {
+        width: 300px;
+        padding: 40px 0;
+    }
 }
 
 .input {
+    @extend %input;
     width: 90%;
-    padding: 25px 25px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 18px;
 
-        &::placeholder {
-            color: rgb(192, 192, 192);
-        }
-
-        &:focus::placeholder {
-            color: transparent;
-        }
+    @media screen and (min-width: 320px) and (max-width: 620px) {
+        width: 83%;
+    }
 }
 
 .showPasswordIcon {
@@ -35,24 +31,16 @@
     width: 35px;
     height: 30px;
     margin-bottom: -30px;
+
+    @media screen and (min-width: 320px) and (max-width: 620px) {
+        left: 250px;
+    }
 }
 
 .loginBtn {
-    border: none;
-    border-radius: 5px;
-    background-color: #28d2d0;
-    padding: 20px 30px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 800;
-    color: white;
-    cursor: pointer;
+    @extend %formSubmitBtn;
 }
 
 .errorMsg {
-    color: rgb(255, 0, 157);
-    font-weight: 700;
-    font-size: 15px;
-    margin: 0 0 0 8px;
+    @extend %errorMsg;
 }
